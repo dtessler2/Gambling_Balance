@@ -80,8 +80,8 @@ class TEST_GamblingBalance {
 	}
 	
 	@Test
-	void testBetOnEqualsProbability() {
-		mockRand.setMockProbability(1);
+	void testBetOnProbabilityEqualsOne() {
+		mockRand.setMockProbability(.5);
 		assertEquals(0, gb.betOnProbability(100, 1));
 	}
 	
@@ -91,16 +91,16 @@ class TEST_GamblingBalance {
 	}
 	
 	@Test
-	void probabilityArgumentLessThanActualProbability() {
-		mockRand.setMockProbability(0.7);
+	void randomProbabilityLessThanActualProbability() {
+		mockRand.setMockProbability(0.1);
 		assertEquals(400, gb.betOnProbability(100, 0.2));
 	}
 	
 	@Test
-	void betOnProbabilityWithAmountGreaterThanBalanceMinusMinbalance() {
+	void losingBetOnProbabilityWithAmountGreaterThanBalanceMinusMinbalance() {
 		gb.addMoney(15);
-		mockRand.setMockProbability(0.1);
-		assertEquals(0, gb.betOnProbability(16, 0.9));
+		mockRand.setMockProbability(0.7);
+		assertEquals(0, gb.betOnProbability(16, 0.5));
 	}
 	
 

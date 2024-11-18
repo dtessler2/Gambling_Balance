@@ -2,11 +2,11 @@ package assignment_4_Final;
 
 public class MockRandomValueGenerator implements IRandomValueGenerator {
 
-	private int randNum;
-	private int p;
+	private double randNum;
+	private double p;
 	
 	@Override
-	public int randNumInRange(int min, int max) {
+	public double randNumInRange(double min, double max) {
 		return randNum;
 	}
 
@@ -18,11 +18,11 @@ public class MockRandomValueGenerator implements IRandomValueGenerator {
 		return false;
 	}
 	
-	public void setMockNum(int randNum) {
+	public void setMockNum(double randNum) {
 		this.randNum = randNum;
 	}
 	
-	public void setMockProbability(int p) {
+	public void setMockProbability(double p) {
 		this.p = p * 100;
 	}
 
