@@ -20,7 +20,7 @@ public class GamblingBalance {
 		
 	}
 	
-	public double betOnANumber(double amnt, int min, int max, int selectedNumber) {
+	public double betOnANumber(double amnt, double min, double max, double selectedNumber) {
 		return 0;
 	}
 	

@@ -10,13 +10,13 @@ public class RandomValueGenerator implements IRandomValueGenerator{
 	}
 	
 	@Override
-	public int randNumInRange(int min, int max) {
-		return rand.nextInt((max + 1) - min) + min;
+	public double randNumInRange(double min, double max) {
+		return rand.nextDouble((max + 1) - min) + min;
 	}
 
 	@Override
 	public boolean getTrueWithProbability(double probability) {
-		int randNum = rand.nextInt(100 + 1);
+		double randNum = rand.nextDouble(100 + 1);
 		if(randNum <= (probability * 100)) {
 			return true;
 		}
